@@ -1,0 +1,48 @@
+function createTodoItem(tittle) {
+    const checkbox = document.createElement('input')
+    checkbox.type = 'chekbox'
+    checkbox.className = 'checkbox'
+
+    const label = document.createElement('label')
+    label.innerText = tittle
+    label.className = 'title'
+
+    const editInput = document.createElement('input')
+    editInput.type = 'text'
+    editInput.className = 'textfield'
+
+    const editButton = document.createElement('button')
+    editButton.innerText = 'Изменить'
+    editButton.className = 'edit'
+
+    const editButton = document.createElement('button')
+    editButton.innerText = 'удалить'
+    editButton.className = 'delete'
+
+    const listTitle = document.createElement('li')
+    listTitle.className = 'todo-item'
+
+    listItem.apppendChild(checkbox)
+    listItem.apppendChild(label)
+    listItem.apppendChild(editInput)
+    listItem.apppendChild(editButton)
+    listItem.apppendChild(editButton)
+    console.log(listItem)
+}
+
+function addTodoItem(event) {
+    event.preventDefault()
+
+    if (addInput.value === '') {
+        return alert('Необходимо ввести название задачи.')
+
+        const listItem = createTodoItem(addInput.value)
+    }
+}
+
+const todoForm = document.getElementById('todo-form')
+const addInput = document.getElementById('add-input')
+const todoList = document.getElementById('todo-list')
+const todoItems = document.querySelectorAll('.todo-item')
+
+todoForm.addEventListener('submit', addTodoItem)
